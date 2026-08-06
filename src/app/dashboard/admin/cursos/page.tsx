@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
-import { BrainCircuit, Upload, Youtube, Plus, Loader2, BookOpen, Settings, LayoutGrid } from "lucide-react"
+import { BrainCircuit, Upload, Video, Plus, Loader2, BookOpen, Settings, LayoutGrid } from "lucide-react"
 
 export default function CriadorCursosPage() {
   const [isGenerating, setIsGenerating] = useState(false)
@@ -62,7 +62,7 @@ export default function CriadorCursosPage() {
 
           <Card className="border-border shadow-lg">
             <CardHeader className="bg-muted/30 border-b border-border pb-4">
-              <CardTitle className="text-xl flex items-center gap-2"><Youtube className="h-5 w-5 text-red-500"/> Mídia e Materiais</CardTitle>
+              <CardTitle className="text-xl flex items-center gap-2"><Video className="h-5 w-5 text-red-500"/> Mídia e Materiais</CardTitle>
               <CardDescription>O coração da sua aula. Anexe o vídeo principal e os arquivos de apoio.</CardDescription>
             </CardHeader>
             <CardContent className="pt-6 space-y-8">
