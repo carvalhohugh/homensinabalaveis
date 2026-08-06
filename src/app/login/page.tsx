@@ -8,6 +8,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { createClient } from "@/utils/supabase/client"
+import Link from "next/link"
 
 export default function LoginPage() {
   const [email, setEmail] = useState("")
@@ -95,11 +96,18 @@ export default function LoginPage() {
               />
             </div>
           </CardContent>
-          <CardFooter>
+          <CardFooter className="flex flex-col gap-4">
             <Button type="submit" className="w-full font-bold" disabled={loading}>
               {loading ? <Loader2 className="h-4 w-4 animate-spin mr-2" /> : null}
               {loading ? "Entrando..." : "Entrar"}
             </Button>
+            
+            <p className="text-sm text-muted-foreground text-center">
+              Ainda não é mentoriado?{" "}
+              <Link href="/cadastro" className="text-primary hover:underline font-medium">
+                Cadastre-se aqui
+              </Link>
+            </p>
           </CardFooter>
         </form>
       </Card>

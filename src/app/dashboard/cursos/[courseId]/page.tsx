@@ -6,7 +6,7 @@ import { PlayCircle, CheckCircle, Lock, ChevronLeft, ChevronDown, Headphones, Vi
 import dynamic from "next/dynamic"
 
 // Dynamically import ReactPlayer to avoid SSR hydration issues
-const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false })
+const ReactPlayer = dynamic(() => import("react-player"), { ssr: false })
 
 export default function CoursePlayerPage() {
   const [isPodcastMode, setIsPodcastMode] = useState(false)
